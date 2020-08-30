@@ -10,11 +10,6 @@ let buttonRegistration = document.getElementsByName('button_registration');
 let buttonEnter = document.getElementsByName('button_enter');
 let aboutUser = document.querySelector('.content');
 
-
-
-console.log(modalOpenRegistration);
-
-
 // ===============Главный экран==================
 modalOpenRegistration.addEventListener('click', function(){
     modalRegistration.style.display = 'block';
@@ -37,8 +32,6 @@ buttonExit.forEach(function(item){
      });
 });
 
-
-
 // Проверка заполнения полей
 function fieldValidation(object) {
     for (let key in object) {
@@ -60,7 +53,6 @@ buttonRegistration[0].addEventListener('click', function() {
     user.name = formRegistration.elements.registration_name.value;
     user.age = formRegistration.elements.registration_age.value;
     
-
     if (fieldValidation(user)) {
         userList.push(user);
         formRegistration.reset();
@@ -69,12 +61,8 @@ buttonRegistration[0].addEventListener('click', function() {
         overlay.style.display = 'none';
     } else {
         alert ('Maybe, something is missing!')
-    }
-
-    console.log(user);
-    console.log(userList); 
+    } 
 });
-
 // ==================Форма входа=====================
 
 buttonEnter[0].addEventListener('click', function() {
@@ -105,9 +93,7 @@ buttonEnter[0].addEventListener('click', function() {
         let span = document.querySelectorAll('span');
         span[0].innerHTML = signInUser.login;
         span[1].innerHTML = signInUser.password;
-    console.log(span)
     }
-
 });
 
 
