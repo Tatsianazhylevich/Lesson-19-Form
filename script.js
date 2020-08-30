@@ -9,6 +9,12 @@ let buttonExit = document.getElementsByName('button_exit');
 let buttonRegistration = document.getElementsByName('button_registration');
 let buttonEnter = document.getElementsByName('button_enter');
 let aboutUser = document.querySelector('.content');
+let modalWrong = document.querySelector('.wrong');
+
+
+
+console.log(modalOpenRegistration);
+
 
 // ===============Главный экран==================
 modalOpenRegistration.addEventListener('click', function(){
@@ -29,8 +35,11 @@ buttonExit.forEach(function(item){
         modalEnter.style.display = 'none';
         aboutUser.style.display = 'none';
         overlay.style.display = 'none';
+        modalWrong.style.display = 'none';
      });
 });
+
+
 
 // Проверка заполнения полей
 function fieldValidation(object) {
@@ -53,6 +62,7 @@ buttonRegistration[0].addEventListener('click', function() {
     user.name = formRegistration.elements.registration_name.value;
     user.age = formRegistration.elements.registration_age.value;
     
+
     if (fieldValidation(user)) {
         userList.push(user);
         formRegistration.reset();
@@ -60,9 +70,14 @@ buttonRegistration[0].addEventListener('click', function() {
         modalRegistration.style.display = 'none';
         overlay.style.display = 'none';
     } else {
-        alert ('Maybe, something is missing!')
-    } 
+        modalRegistration.style.display = 'none';
+        modalWrong.style.display = 'block';
+    }
+
+    console.log(user);
+    console.log(userList); 
 });
+
 // ==================Форма входа=====================
 
 buttonEnter[0].addEventListener('click', function() {
@@ -75,15 +90,18 @@ buttonEnter[0].addEventListener('click', function() {
     if (fieldValidation(userCheck)) {
         userCheck =  userList.find(function(item) {
             if(item.login === signInUser.login && item.password === signInUser.password) {
+                
                 return true
             } else {
-                alert('Something went wrong! Check the entered data!')
+                modalWrong.style.display = 'block';
+                modalEnter.style.display = 'none'; 
             }   
-        }) 
+        })
+        formEnter.reset(); 
     } else {
-        alert ('Maybe, something is missing!')
+        modalWrong.style.display = 'block';
+        modalEnter.style.display = 'none';
         return false;
-        formEnter.reset();
     } 
     
     if(userCheck) {
@@ -93,7 +111,10 @@ buttonEnter[0].addEventListener('click', function() {
         let span = document.querySelectorAll('span');
         span[0].innerHTML = signInUser.login;
         span[1].innerHTML = signInUser.password;
+    console.log(span)
+    } else {
+        modalWrong.style.display = 'block';
+        modalEnter.style.display = 'none';
     }
+
 });
-
-
