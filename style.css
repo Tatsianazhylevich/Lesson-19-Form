@@ -1,0 +1,168 @@
+/* Главная страница (две кнопки) */
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    margin: 4vh;
+    padding: 2vh 3vw;
+    color: #a906db;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: calc(8px + 1.5vw);
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+a:hover{
+    color:#ffffff;
+    background: #b509e9;
+    border: 1px solid #ff06ff;
+    box-shadow: 0 0 10px #ec06e1, 0 0 40px #ec06e1;
+    transition-delay: 0.25s;
+}
+
+/* подложка */
+
+.overlay {
+   
+    /* Скрываем подложку  */
+    display: none;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+/* модальные окна */
+.modal1 {
+    /* Скрываем окна  */
+    display: none;
+    
+    /*  Устанавливаем ширину окна  */
+    width: 100%;
+    max-width: 500px;
+    
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30; /* Должен быть выше чем у подложки*/
+    
+    /*  Побочные стили   */
+    box-shadow: 0 0 10px #ec06e073, 0 0 20px #ec06e05d;  
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: rgba(59, 11, 75, 0.856);
+    transition: 0.3s all;
+}
+
+.modal2 {
+    /* Скрываем окна  */
+    display: none;
+    
+    /*  Устанавливаем ширину окна  */
+    width: 100%;
+    max-width: 500px;
+    
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30; /* Должен быть выше чем у подложки*/
+    
+    /*  Побочные стили   */
+    box-shadow: 0 0 10px #ec06e073, 0 0 20px #ec06e05d;
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: rgba(59, 11, 75, 0.856);
+    transition: 0.3s all;
+}
+.content {
+    /* Скрываем окна  */
+    display: none;
+    
+    /*  Устанавливаем ширину окна  */
+    width: 100%;
+    max-width: 500px;
+    
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 35; /* Должен быть выше чем у подложки*/
+    
+    /*  Побочные стили   */
+    box-shadow: 0 0 10px #ec06e079, 0 0 30px #ec06e05d; 
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: rgba(80, 15, 102, 0.808);
+    transition: 0.3s all;
+
+    color: #a906db;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: calc(8px + 1.5vw);
+}
+input{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid purple;
+    border-radius: 25px;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #e006e0;
+}
+
+.button{
+    margin: 0;
+    color: #e006e0;
+}
+
+.content_info, span{
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: calc(8px + 1.5vw);
+}
