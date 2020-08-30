@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer type= "text/javascript" src="./script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <a href="#" class="js-modal-open-registration">Registration</a>
+      <a href="#" class="js-modal-open-enter">Enter </a>
+    </div>
+    <div class="modal1 modal_registration">
+      <form name='registration' action='index.html' method='post'>
+        <h1>Registration</h1>
+        <input type="text" name="registration_login" placeholder="Login">
+        <input type="password" name="registration_password" placeholder="Password">
+        <input type="text" name="registration_name" placeholder="Name">
+        <input type="text" name="registration_age" placeholder="Age">
+        <div class="button-box">
+          <a class='button' name= 'button_registration' href="#">Login</a>
+          <a class='button' name= 'button_exit' href="#">Exit</a>
+        </div>
+      </form>
+    </div>
+    <div class="modal2 modal_enter">
+      <form name='enter' action="index.html">
+        <h1>Enter</h1>
+        <input type="text" name="enter_login" placeholder="Login">
+        <input type="password" name="enter_password" placeholder="Password">
+        <div class="button-box">
+          <a class='button' name= 'button_enter'href="#">LogIn</a>
+          <a class='button' name= 'button_exit' href="#">Exit</a>
+        </div>
+      </form>
+    </div>
+    <div class="content">Congratulation!
+      <p class = 'content_info'>Your login:  
+        <span></span>
+      </p>
+      <p class = 'content_info'>Your password: 
+        <span></span>
+      </p>
+      <a class='button' name= 'button_exit' href="#">LogOut</a>
+    </div>
+    <div class="overlay" id="overlay-modal"></div>
+  </div>
+</body>
+</html>
