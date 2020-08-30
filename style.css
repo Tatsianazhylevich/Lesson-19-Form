@@ -105,7 +105,7 @@ a:hover{
     background-color: rgba(59, 11, 75, 0.856);
     transition: 0.3s all;
 }
-.content {
+.content, .wrong {
     /* Скрываем окна  */
     display: none;
     
@@ -133,6 +133,11 @@ a:hover{
     letter-spacing: 3px;
     text-decoration: none;
     font-size: calc(8px + 1.5vw);
+}
+.wrong {
+    background-color: rgba(54, 10, 68, 0.938);
+    color: #ffffff;
+    font-size: calc(8px + 1vw);
 }
 input{
     border: 0;
